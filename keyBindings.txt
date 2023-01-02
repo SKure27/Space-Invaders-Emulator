@@ -1,0 +1,35 @@
+CREDIT = 1 (Zero when active)
+1P start = 2
+2P start = NONE
+1P shot = Q
+1P left = left
+1P right = right
+
+Port 1
+ bit 0 = CREDIT (1 if deposit)
+ bit 1 = 2P start (1 if pressed)
+ bit 2 = 1P start (1 if pressed)
+ bit 3 = Always 1
+ bit 4 = 1P shot (1 if pressed)
+ bit 5 = 1P left (1 if pressed)
+ bit 6 = 1P right (1 if pressed)
+ bit 7 = Not connected
+
+bit 0 = 0
+bit 1 = 0
+bit 2 (Reset switch/tilt detector) = ` (SDL_SCANCODE_GRAVE)
+bit 3 = 0
+P2 shot = NONE
+P2 left = NONE
+P2 right = NONE
+bit 7 = 0
+
+Port 2
+ bit 0 = DIP3 00 = 3 ships  10 = 5 ships
+ bit 1 = DIP5 01 = 4 ships  11 = 6 ships
+ bit 2 = Tilt
+ bit 3 = DIP6 0 = extra ship at 1500, 1 = extra ship at 1000
+ bit 4 = P2 shot (1 if pressed)
+ bit 5 = P2 left (1 if pressed)
+ bit 6 = P2 right (1 if pressed)
+ bit 7 = DIP7 Coin info displayed in demo screen 0=ON
